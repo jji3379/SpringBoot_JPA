@@ -20,5 +20,5 @@ public class Delivery {
     private Address address;
 
     @Enumerated(EnumType.STRING) // 꼭 String 으로 해야함, 기본은 ORDINAL 인데 이건 숫자로 들어감
-    private DeliveryStatus deliveryStatus; // ready, comp
+    private DeliveryStatus status; // ready, comp
 }
