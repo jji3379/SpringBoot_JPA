@@ -23,12 +23,15 @@ public abstract class Item {
     private int price;
     private int stockQuantity;
 
-    @ManyToMany(mappedBy = "items")
+
+    /*
     @JoinTable(
             name = "category_item",
             joinColumns = @JoinColumn(name = "category_id"),
             inverseJoinColumns = @JoinColumn(name = "item_id")
     ) // 중간 테이블 매핑
+     */
+    @ManyToMany(mappedBy = "items")
     private List<Category> categories = new ArrayList<>();
 
     //==비즈니스 로직==//

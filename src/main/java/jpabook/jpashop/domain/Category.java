@@ -18,12 +18,15 @@ public class Category {
 
     private String name;
 
-    @ManyToMany // 컬렉션 관계, 실무에서는 쓰지 말아야 한다.
+
+    /*
     @JoinTable(
             name = "category_item",
             joinColumns = @JoinColumn(name = "category_id"),
             inverseJoinColumns = @JoinColumn(name = "item_id")
     ) // 중간 테이블 매핑
+     */
+    @ManyToMany // 컬렉션 관계, 실무에서는 쓰지 말아야 한다.
     private List<Item> items = new ArrayList<>();
 
     @ManyToOne(fetch = FetchType.LAZY)
